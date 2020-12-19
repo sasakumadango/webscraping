@@ -18,7 +18,14 @@ for ($i = 1; $i <= 15; $i++) {
 		echo "* **" . trim($questions[".correct"]->find("label:eq(" . $j . ")")->text()) . "**";
 		echo "<br>";
 		echo "<br>";
-		echo $comentList->find("p:eq(" . $j . ")");
-		echo "<br>";
+
+		$coment = $comentList->find(".cke_contents_ltr:eq(" . $j . ")")->find("p")->text();
+		if ($coment != "") {
+			echo "**解説**";
+			echo "<br>";
+			echo "* " . $coment;
+			echo "<br>";
+			echo "<br>";
+		}
 	}
 }
