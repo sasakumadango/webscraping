@@ -1,1 +1,4 @@
 source/*
+makePDF/source/*
+makePDF/output/*
+!.gitkeep
